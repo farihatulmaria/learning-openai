@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import './App.css';
 
 function App() {
   const [message, setMessage] = useState('')
@@ -23,7 +22,7 @@ function App() {
         <textarea value={message} onChange={(e)=> setMessage(e.target.value)}></textarea>
         <button type='submit'>Submit</button>
       </form>
-      <div>{response}</div>
+      {response && <div><b>Steve: </b>{response}</div>}
     </div>
   );
 }
